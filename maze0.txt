@@ -1,0 +1,21 @@
+20 7
+0 18
+6 12
+XXXXXXXXXXXXXXXXXX X
+X                  X
+X                  X
+X                  X
+X                  X
+X                  X
+XXXXXXXXXXXX XXXXXXX
+
+# Possible solution, not the shortest path
+*** Solving maze0.txt
+Path: NNNNNESSSSENNNNESSSSENNNNESSSSENNNNN
+XXXXXXXXXXXXXXXXXX*X
+X           *******X
+X           *******X
+X           *******X
+X           *******X
+X           *******X
+XXXXXXXXXXXX*XXXXXXX

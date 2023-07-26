@@ -1,0 +1,111 @@
+Sat Oct 24 13:59:56 PDT 2020
+Linux csslab11.uwb.edu 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+uid=870540(pisan) gid=2120870540(pisan) groups=2120870540(pisan),579804(faculty)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+=====================================================
+2. Runs and produces correct output
+=====================================================
+*** Solving maze0.txt
+Path: NNNNNESSSSENNNNESSSSENNNNESSSSENNNNN
+XXXXXXXXXXXXXXXXXX*X
+X           *******X
+X           *******X
+X           *******X
+X           *******X
+X           *******X
+XXXXXXXXXXXX*XXXXXXX
+
+
+*** Solving maze1.txt
+Path: NNWWWWWNNNEEEEEESEESSSEEENNNNN
+XXXXXXXXXXXXXXXXXX*X
+X     X*******XXXX*X
+X XXXXX*XXXXX***XX*X
+X XXXXX*XXXXXXX*XX*X
+X X    ******XX*XX*X
+X XXXXXXXXXX*XX****X
+XXXXXXXXXXXX*XXXXXXX
+
+
+*** Solving maze2.txt
+Path: NEEEEEENNNNN
+XXXXXXXXXXXXXXXXXX*X
+X     X++++++XXXXX*X
+X XXXXX+XXXX+X++XX*X
+X XXXXX+XXXX+XX+XX*X
+X X++++++++X+XX+XX*X
+X XXXXXXXXXX*******X
+XXXXXXXXXXXX*XXXXXXX
+
+
+*** Solving maze3.txt
+Failed to solve: maze3.txt
+XXXXXXXXXXXXXXXXXX X
+X+++++X++++++XXXXX X
+X+X+X+X+X++X+X++XX X
+X+X+XXX+XXXX+XX+XX X
+X+X++++++++X+XX+XX X
+X+XXXXXXXXXX+++++X X
+XXXXXXXXXXXX+XXXXXXX
+
+
+*** Solving badfile.txt
+Unable to open file: badfile.txt
+Failed to load badfile.txt
+Done!
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+12164 warnings generated.
+28559 warnings generated.
+Suppressed 28559 warnings (28559 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./main.cpp
+Running clang-format on ./maze.cpp
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==31257== Memcheck, a memory error detector
+==31257== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==31257== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==31257== Command: ./a.out maze0.txt maze1.txt maze2.txt maze3.txt badfile.txt
+==31257== Parent PID: 31202
+==31257== 
+==31257== 
+==31257== HEAP SUMMARY:
+==31257==     in use at exit: 0 bytes in 0 blocks
+==31257==   total heap usage: 78 allocs, 78 frees, 111,262 bytes allocated
+==31257== 
+==31257== All heap blocks were freed -- no leaks are possible
+==31257== 
+==31257== For lists of detected and suppressed errors, rerun with: -s
+==31257== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+Unable to open file: badfile.txt
+Failed to load badfile.txt
+File '/home/NETID/pisan/bitbucket/pisan342/ass3-maze-solution/main.cpp':
+Name                        Regions    Miss   Cover     Lines    Miss   Cover
+-----------------------------------------------------------------------------
+test(std::string const&)          7       0 100.00%        14       0 100.00%
+main                              6       0 100.00%        10       0 100.00%
+-----------------------------------------------------------------------------
+TOTAL                            13       0 100.00%        24       0 100.00%
+
+...
+
+Sat Oct 24 14:00:10 PDT 2020
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================

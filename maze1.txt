@@ -1,0 +1,22 @@
+20 7
+0 18
+6 12
+XXXXXXXXXXXXXXXXXX X
+X     X       XXXX X
+X XXXXX XXXXX   XX X
+X XXXXX XXXXXXX XX X
+X X          XX XX X
+X XXXXXXXXXX XX    X
+XXXXXXXXXXXX XXXXXXX
+
+# Might backtrack or not
+# depending on order of directions being tried
+*** Solving maze1.txt
+Path: NNWWWWWNNNEEEEEESEESSSEEENNNNN
+XXXXXXXXXXXXXXXXXX*X
+X     X*******XXXX*X
+X XXXXX*XXXXX***XX*X
+X XXXXX*XXXXXXX*XX*X
+X X    ******XX*XX*X
+X XXXXXXXXXX*XX****X
+XXXXXXXXXXXX*XXXXXXX
